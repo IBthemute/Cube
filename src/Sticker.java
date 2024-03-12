@@ -10,4 +10,5 @@ public class Sticker {
     }
 
     public StickerColor getColor() {return this.color;}
+    public void setColor(StickerColor color) {this.color = color;}
 }

@@ -40,7 +40,23 @@ public class Face {
         }
     }
 
+    public Face(FacePosition position, Sticker[] stickers) {
+        this.position = position;
+        Sticker.StickerColor color;
+        // green front, white up
+        this.stickers = stickers;
+    }
+
     public Sticker getSticker(int index) {
         return stickers[index];
+    }
+    public Sticker[] getStickers() {return stickers;}
+    public void setStickerColor(int index, Sticker.StickerColor color) {stickers[index].setColor(color);}
+
+    public void display() {
+        for (int i = 0; i < stickers.length; i++) {
+            System.out.print(stickers[i].getColor() + ", ");
+        }
+        System.out.println();
     }
 }
