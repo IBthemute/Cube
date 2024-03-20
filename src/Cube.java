@@ -33,56 +33,22 @@ public class Cube {
         // R move
         // moves FUBD faces
 
-        Sticker[] FFaceStickers = new Sticker[9];
-        Sticker[] UFaceStickers = new Sticker[9];
-        Sticker[] BFaceStickers = new Sticker[9];
-        Sticker[] DFaceStickers = new Sticker[9];
-
-        // copy initial face states
-        System.arraycopy(this.faces[2].getStickers(), 0, FFaceStickers, 0, 9);
-        System.arraycopy(this.faces[0].getStickers(), 0, UFaceStickers, 0, 9);
-        System.arraycopy(this.faces[4].getStickers(), 0, BFaceStickers, 0, 9);
-        System.arraycopy(this.faces[5].getStickers(), 0, DFaceStickers, 0, 9);
-
-        // create temporary faces with the original states
-        Face FFace = new Face(Face.FacePosition.F, FFaceStickers);
-        Face UFace = new Face(Face.FacePosition.U, UFaceStickers);
-        Face BFace = new Face(Face.FacePosition.B, BFaceStickers);
-        Face DFace = new Face(Face.FacePosition.D, DFaceStickers);
-
-        FFace.display();
-        UFace.display();
-        BFace.display();
-        DFace.display();
-        System.out.println();
-
-        // todo: improve code readability if possible
-
-        // F
-        this.faces[2].setStickerColor(2, DFace.getSticker(2).getColor());
-        this.faces[2].setStickerColor(5, DFace.getSticker(5).getColor());
-        this.faces[2].setStickerColor(8, DFace.getSticker(8).getColor());
-        // U
-        this.faces[0].setStickerColor(2, FFace.getSticker(2).getColor());
-        this.faces[0].setStickerColor(5, FFace.getSticker(5).getColor());
-        this.faces[0].setStickerColor(8, FFace.getSticker(8).getColor());
-        // B
-        this.faces[4].setStickerColor(2, UFace.getSticker(2).getColor());
-        this.faces[4].setStickerColor(5, UFace.getSticker(5).getColor());
-        this.faces[4].setStickerColor(8, UFace.getSticker(8).getColor());
-        // D
-        this.faces[5].setStickerColor(2, BFace.getSticker(2).getColor());
-        this.faces[5].setStickerColor(5, BFace.getSticker(5).getColor());
-        this.faces[5].setStickerColor(8, BFace.getSticker(8).getColor());
+        // TODO because it is very hard
     }
 
     public void move(String type) {
-        if ("U".equals(type)) {
-        } else if ("L".equals(type)) {
-        } else if ("F".equals(type)) {
-        } else if ("R".equals(type)) {
-        } else if ("B".equals(type)) {
-        } else if ("D".equals(type)) {
+        boolean prime = false;
+
+        if ((type.length() == 2) && (type.charAt(1) == '\'')) {
+            prime = true;
+        }
+
+        if ('U' == type.charAt(0)) {
+        } else if ('L' == type.charAt(0)) {
+        } else if ('F' == type.charAt(0)) {
+        } else if ('R' == type.charAt(0)) {
+        } else if ('B' == type.charAt(0)) {
+        } else if ('D' == type.charAt(0)) {
         } else {
             throw new IllegalStateException("Unexpected move: " + type);
         }
