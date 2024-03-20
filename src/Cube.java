@@ -33,7 +33,17 @@ public class Cube {
         // R move
         // moves FUBD faces
 
+        Sticker[] originalFStickers = this.faces[2].getStickers();
+        Sticker[] originalUStickers = this.faces[0].getStickers();
+
         // TODO because it is very hard
+        this.faces[0].setStickerColor(2, this.faces[2].getSticker(2).getColor());
+        this.faces[0].setStickerColor(5, this.faces[2].getSticker(5).getColor());
+        this.faces[0].setStickerColor(8, this.faces[2].getSticker(8).getColor());
+
+        this.faces[0].setStickerColor(2, originalUStickers[2].getColor());
+        this.faces[0].setStickerColor(5, originalUStickers[5].getColor());
+        this.faces[0].setStickerColor(8, originalUStickers[8].getColor());
     }
 
     public void move(String type) {

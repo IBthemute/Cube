@@ -50,8 +50,12 @@ public class Face {
     public Sticker getSticker(int index) {
         return stickers[index];
     }
-    public Sticker[] getStickers() {return stickers;}
-    public void setStickerColor(int index, Sticker.StickerColor color) {stickers[index].setColor(color);}
+    public Sticker[] getStickers() {
+        return stickers;
+    }
+    public void setStickerColor(int index, Sticker.StickerColor color) {
+        stickers[index].setColor(color);
+    }
 
     public void display() {
         for (int i = 0; i < stickers.length; i++) {

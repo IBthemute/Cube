@@ -9,6 +9,10 @@ public class Sticker {
         this.color = color;
     }
 
-    public StickerColor getColor() {return this.color;}
-    public void setColor(StickerColor color) {this.color = color;}
+    public StickerColor getColor() {
+        return this.color;
+    }
+    public void setColor(StickerColor color) {
+        this.color = color;
+    }
 }
